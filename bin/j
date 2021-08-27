@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+import argparse
+from j import main
+
+if __name__ == '__main__':
+  parser = argparse.ArgumentParser()
+  parser.add_argument('project', help='project')
+  parser.add_argument('epic', help='epic')
+  parser.add_argument('component', help='component')
+  parser.add_argument('assignee', help='assignee')
+  parser.add_argument('title', help='title')
+  parser.add_argument('--description', '-d', help='description')
+  args = parser.parse_args()
+  url = main(**args.__dict__)
+  print(url)
