@@ -14,12 +14,15 @@ $ pip3 install git+https://github.com/roronya/j
 $ export JIRA_USER="JIRA_USER"
 $ export JIRA_PASSWORD="JIRA_PASSWORD"
 $ export JIRA_SERVER="https://your.jira.server.com"
-$ j project epic component assignee title -d description
+$ j PROJECT summary # デフォルトではバニラのタスクができる
+$ j PROJECT summary -e epic -c component # エピックとコンポーネントを指定してタスクを作る
+$ j PROJECT summary -i ストーリー # ストーリーを作る
+$ j PROJECT summary -i Sub-task -p parent-task-key# サブタスクを作る
 ```
 
 ## develop
 
 ```shell
-$ vim j/__main__.py
-$ python3 -m j
+$ vim j/j.py
+$ ./bin/j
 ```
