@@ -8,8 +8,14 @@ def setup_package():
           author='Yuki Kanai',
           author_email='yukikanai0204@gmail.com',
           install_requires=['jira'],
-          scripts=['bin/j']
-    )
+          packages=find_packages(),
+          entry_points={
+              'console_scripts': [
+                  'j = j.j:main'
+              ]
+          }
+          )
+
 
 if __name__ == '__main__':
     setup_package()
