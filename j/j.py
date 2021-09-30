@@ -18,6 +18,8 @@ def main(project, summary, epic, component, assignee, description, issuetype, pa
         issue_dict['assignee'] = {'name': assignee}
     if component:
         issue_dict['components'] = [{"name": component}]
+    if parent:
+        issue_dict['parent'] = {'id': parent}
     new_issue = j.create_issue(issue_dict)
     if epic:
         j.add_issues_to_epic(epic, new_issue.key)
