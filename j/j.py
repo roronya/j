@@ -22,7 +22,8 @@ def main():
     print(url)
 
 
-def create(project, summary, epic, component, assignee, description, issuetype, parent):
+def create(project, summary, epic, component, assignee, description, issuetype,
+    parent):
     options = {'server': SERVER}
     j = JIRA(options=options, basic_auth=(USER, PASSWORD))
     issue_dict = {'project': project, 'summary': summary,
@@ -39,5 +40,9 @@ def create(project, summary, epic, component, assignee, description, issuetype, 
         issue_dict['parent'] = {'id': parent}
     new_issue = j.create_issue(issue_dict)
     if epic:
-        j.add_issues_to_epic(epic, new_issue.key)
+        j.add_issues_to_epic(epic, [new_issue.key])
     return f"{SERVER}/browse/{new_issue.key}"
+
+
+if __name__ == '__main__':
+    main()
