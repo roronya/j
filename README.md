@@ -3,7 +3,7 @@ jira ticket issuer
 
 ## installation
 
-```shell
+```shelｇl
 $ brew install python3
 $ pip3 install git+https://github.com/roronya/j
 ```
@@ -24,5 +24,5 @@ $ j PROJECT summary -i Sub-task -p parent-task-key# サブタスクを作る
 
 ```shell
 $ vim j/j.py
-$ ./bin/j
+$ python3 j/j.py
 ```
