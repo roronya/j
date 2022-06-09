@@ -5,7 +5,7 @@ jira ticket issuer
 
 ```shelｇl
 $ brew install python3
-$ pip3 install git+https://github.com/roronya/j # for mac
+$ pip3 install git+https://github.com/roronya/j.git # for mac
 ```
 
 ## usage
