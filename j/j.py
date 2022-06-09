@@ -42,7 +42,3 @@ def create(project, summary, epic, component, assignee, description, issuetype,
     if epic:
         j.add_issues_to_epic(epic, [new_issue.key])
     return f"{SERVER}/browse/{new_issue.key}"
-
-
-if __name__ == '__main__':
-    main()
