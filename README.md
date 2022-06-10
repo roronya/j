@@ -24,5 +24,5 @@ $ j PROJECT summary -i Sub-task -p parent-task-key # make a sub-task
 
 ```shell
 $ poetry install # setup
-$ poetry run python -m j # execute j/__main__.py in virtual env
+$ poetry run j # execute j/j.py in virtual env
 ```
