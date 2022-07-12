@@ -112,8 +112,10 @@ func GetUser(
 
 // IssueCreate
 // client: NewClientによって作ったclient
-// project: JIRAのプロジェクト
-// issueType: 現状はTaskのみ対応している
+// project: JIRAのプロジェクト。存在するJIRAのプロジェクトを必ず渡す。存在しないJIRAのプロジェクトを渡すとエラーになる。
+// component: コンポーネント。設定しない場合は空文字を渡す。
+// epic: エピック。設定しない場合は空文字を渡す。
+// issueType: 現状はTaskのみ対応している。Task以外を渡すとエラーになる。
 // summary: JIRAのチケットのタイトルになる
 // assignee: アサインする人のアカウントIDを渡す。アカウントIDはGetUserによって取得できる。アサインしない場合は空文字を渡すと非アサイン状態になる。
 // reporter: アサインする人のアカウントIDを渡す。アカウントIDはGetUserによって取得できる。アサインしない場合は空文字を渡すとチケットを作った人が報告者になる。
