@@ -4,7 +4,7 @@ The jira ticket issuer
 ## installation
 
 ```shell
-$ go get github.com/roronya/j
+$ go install github.com/roronya/j
 ```
 
 
